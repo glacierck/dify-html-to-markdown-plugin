@@ -1,19 +1,14 @@
-#!/usr/bin/env python3
-"""Dify Plugin Entry Point: HTML to Markdown Converter"""
-
 import logging
 import sys
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[logging.StreamHandler(sys.stderr)],
-)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[logging.StreamHandler(sys.stderr)])
 
 def main():
     try:
         from dify_plugin import Plugin
-        plugin = Plugin()
+        from dify_plugin.config.config import DifyPluginEnv
+        config = DifyPluginEnv()
+        plugin = Plugin(config)
         plugin.run()
     except Exception as e:
         logging.error(f"Plugin failed to start: {e}")
