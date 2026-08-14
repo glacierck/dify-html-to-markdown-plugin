@@ -5,4 +5,4 @@ beautifulsoup4
 pyyaml
 lxml
 pypandoc
-dify-plugin==0.8.0
+dify-plugin==0.8.1
