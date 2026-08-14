@@ -4,5 +4,5 @@ html2text
 beautifulsoup4
 pyyaml
 lxml
-# pypandoc
-# 注意：pypandoc 需要系统级 pandoc，Dify 沙箱默认没有，建议先删掉 pypandoc 避免安装失败
+pypandoc
+dify-plugin
